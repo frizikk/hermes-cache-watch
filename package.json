@@ -1,0 +1,14 @@
+{
+  "name": "hermes-cache-watch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Desktop-only observed LLM activity timer and explicit manual keepalive for Hermes",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test.mjs install.test.mjs",
+    "check": "node --check plugin.js && node --check test.mjs && node --check install.mjs && node --check install.test.mjs && node --check host-smoke.mjs && node --check host-smoke.test.mjs",
+    "test:host": "node host-smoke.mjs",
+    "install:plugin": "node install.mjs"
+  }
+}

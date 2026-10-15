@@ -1,10 +1,19 @@
 # Cache Watch — Hermes Desktop
 
+**Experimental · MIT licensed.** Native Desktop visual validation is still pending; this is not a stable release.
+
 Desktop-only plugin: observed LLM activity age in the status bar and regular/pinned sidebar rows, with an **explicit manual** keepalive button. No Python backend, dependencies, build step, polling, or automatic paid requests. UI and keepalive text are currently Polish; English setup and safety notes follow.
 
 ## Install / update
 
 Requires Hermes **native Desktop** with `SESSION_ROW_AREAS`, `ctx.onDispose`, focused-owner state and `host.composer.submit`. This is not a web-dashboard or Python plugin. Compatibility is capability-based; no minimum released Hermes version has been established. Use Node.js 20+ for the installer and tests. No `npm install` is needed.
+
+Clone the repository, then run the commands from its directory:
+
+```sh
+git clone https://github.com/frizikk/hermes-cache-watch.git
+cd hermes-cache-watch
+```
 
 From this checkout:
 
@@ -45,9 +54,9 @@ HERMES_SOURCE=/absolute/path/to/hermes-agent npm run test:host
 
 It requires that checkout's already-installed Desktop test dependencies; it installs nothing and modifies no host source. It creates/removes only its own temporary harness, using the host's jsdom setup and Vite aliases. The settings form is submitted to in-memory storage; the keepalive button is never clicked. This is not native Electron, a screenshot/geometry test, a disk-loader test or a real composer send. Host source changes can require harness updates. UI and keepalive remain Polish; no broad localization is claimed.
 
-The GitHub Actions workflow runs the dependency-free tests/check on Node 20 and 22, using full action commit pins verified from official upstream tag refs. It has not run remotely while this repository has no remote. See [CHANGELOG.md](CHANGELOG.md) and the outstanding [release checklist](RELEASE_CHECKLIST.md).
+The GitHub Actions workflow runs the dependency-free tests/check on Node 20 and 22, using full action commit pins verified from official upstream tag refs. Check the repository Actions tab for actual remote results; workflow configuration alone is not a passing CI result. See [CHANGELOG.md](CHANGELOG.md) and the outstanding [release checklist](RELEASE_CHECKLIST.md).
 
-This is a standalone local Git repository, intentionally uncommitted and without a remote. No license or authorship grant is inferred. **Before public distribution, the rights holder must choose a license and approve attribution.** `package.json` is private to prevent accidental npm publication. There is deliberately no Python manifest, backend stub, or claim of compatibility with `hermes plugins install`; distribution uses the documented Desktop disk door.
+Published as an experimental standalone plugin at [frizikk/hermes-cache-watch](https://github.com/frizikk/hermes-cache-watch), under the [MIT License](LICENSE), copyright Jakub Wolniewicz. `package.json` is private to prevent accidental npm publication. There is deliberately no Python manifest, backend stub, or claim of compatibility with `hermes plugins install`; distribution uses the documented Desktop disk door.
 
 Authoritative references:
 - [Desktop Plugin SDK](https://hermes-agent.nousresearch.com/docs/developer-guide/desktop-plugin-sdk)

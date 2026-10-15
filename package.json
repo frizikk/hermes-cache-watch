@@ -2,6 +2,7 @@
   "name": "hermes-cache-watch",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Desktop-only observed LLM activity timer and explicit manual keepalive for Hermes",
   "engines": { "node": ">=20" },

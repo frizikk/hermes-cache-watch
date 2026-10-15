@@ -1,13 +1,12 @@
 # Release checklist
 
-This is a local candidate, **not a publish-ready or licensed release**.
+This is an **experimental MIT-licensed public repository**, not a stable release. Native Desktop validation below remains outstanding.
 
 ## Rights and packaging
 
-- [ ] Rights holder selects a license, adds its text and approves attribution.
+- [x] Rights holder approved MIT licensing and attribution; see LICENSE.
 - [ ] Review all files for private paths, identifiers, secrets and unintended content.
-- [ ] Decide repository owner/name and distribution terms explicitly. No remote,
-      commit, tag, upload or publication is part of the local polish task.
+- [x] Public repository and distribution approved: `frizikk/hermes-cache-watch`. No stable release or tag is implied.
 - [ ] Keep `private: true` unless a separate, intentional npm release is approved.
 - [ ] Review CHANGELOG and supported host capabilities; do not invent a minimum version.
 
